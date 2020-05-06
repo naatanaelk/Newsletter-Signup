@@ -30,10 +30,10 @@ app.post("/newsletter", (req, res) => {
     }
 
     const jsonData = JSON.stringify(data);
-    const urlMailchimp = "https://us19.api.mailchimp.com/3.0/lists/c0c502802f";
+    const urlMailchimp = "https://us19.api.mailchimp.com/3.0/lists/YOUR_LIST_NUMBER";
     const options = {
         method: "POST",
-        auth: "natanaelk:845bd4591288148aa61800c6db4c67d7-us19"
+        auth: "your_name:API_KEY"
     }
     const request = https.request(urlMailchimp, options, (response) => {
         if(response.statusCode === 200){
